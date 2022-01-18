@@ -177,7 +177,7 @@ a {
 #suggestions_for_you{
     font-family: 'Arial';
     font-size: 22px;
-    color:#7b787d;
+    color: #333 ;
 }
 
 #suggestion_pic {
@@ -215,7 +215,7 @@ a {
 
 #suggested_for_you{
     /* border-style: groove; */
-    color: grey;
+    color: #333;
     /* font-weight: bold; */
     font-size: 14px;
 }
@@ -272,7 +272,7 @@ a {
     /* border-style: groove; */
     display: block;
     font-family: Arial, Helvetica, sans-serif;
-    color: #a5a9ac;
+    color: #333;
     font-weight: bold;
     margin-top:5px;
     margin-bottom:0px;
@@ -335,7 +335,7 @@ a {
 }
 
 #post_comments_box{
-    border-style: groove;
+    /* border-style: groove; */
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 0px;
@@ -344,13 +344,17 @@ a {
 }
 
 #post_time_box{
-    border-style: groove;
+    /* border-style: groove; */
     font-family: Arial, Helvetica, sans-serif;
-    color: grey;
+    color: #333;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 0px;
     padding-top: 0px;
+    margin: 0px;
+}
+
+#post_time_box p{
     margin: 0px;
 }
 
@@ -412,7 +416,7 @@ a {
     }
     #content {
         width: 90%;
-        margin-top: 50px;
+        margin-top: 10vh;
         margin-left: 10px;
     }
     #wrapper {
