@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Photo App</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    </head>
+    <body>
+        <main>
+            <div id="wrapper">
+                <nav>
+                {% include 'includes/navbar.html' %}
+                </nav>
+                <div id="content">
+                    {% include 'includes/stories.html' %}
+                    {% include 'includes/cards.html' %}            
+                </div>
+                <aside>
+                    {% include 'includes/suggestions.html' %}
+                </aside>
+            </div>
+        </main>
+    </body>
+</html> 
+
+<!-- 
+For question 1: Yes, all my tabs can be accessed without a mouse, by using the tab key.
+
+For question 2: According to the CCA (Colour Contrast Tool), some of the grey text on white/grey backgrounds was
+not visible so I changed the text color to #333. This is why the website may seem a little different than the Professor's 
+design.
+
+For question 3: I would add a method to add alt-text to images by clicking on the three dots at the top right corner
+of a post and giving an option to add alt-text to that post/image.
+If a post has multiple images, it should also allow to individually give different alt-texts to the images.
+-->

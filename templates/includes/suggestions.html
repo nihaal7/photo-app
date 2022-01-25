@@ -1,0 +1,26 @@
+<div id='rightcolumn'>
+    <div id='profile_pic_name'>
+        <div id='picdiv'>              
+            <img id = 'ppic' src = '{{ user.get('image_url') }}' alt='profile pic for {{user.get('username')}}'/>
+        </div>      
+        <div id='namediv'>
+            <h2>{{ user.get('username') }}</h2>
+        </div>
+    </div>
+    <div id='actual_recommendations'>
+        <h3 id='suggestions_for_you'><b>Suggestions for you</b></h3>
+        {% for suggestion in suggestions %}
+        <div id = 'suggestion_box'>
+            <img id = 'suggestion_pic' src = '{{ suggestion.get('image_url') }}' alt = 'profile pic for {{ suggestion.get('username')}}' />
+            <div id ='suggested_name_box'>
+                <p id = suggested_name>{{ suggestion.get('username') }}</p>
+                <p id = 'suggested_for_you'>suggested for you</p>
+            </div>
+            <div id = 'follow_box'>
+                <p><a href="#">follow</a></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>

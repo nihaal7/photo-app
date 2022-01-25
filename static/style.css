@@ -53,9 +53,10 @@ a {
     margin-top: 12vh;
     margin-left: 58%;
     /* width: 35%; */
-    height: 100vh;
+    height: 85vh;
     top: 40;
     left: 0;
+    /* background-color: yellow; */
 }
 
 #title {    
@@ -70,6 +71,20 @@ a {
     padding-bottom: 0px;
     padding-right: 0px;
     padding-left: 3%;
+    /* border-style: groove; */
+}
+
+#title h1{    
+    font-family: 'Comfortaa';
+    font-size: 25px;
+    display: inline-block;
+    margin-right:0px;
+    margin-left:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
     /* border-style: groove; */
 }
 
@@ -140,20 +155,23 @@ a {
     margin-left: 5px;
     padding: 0px;
     font-family: 'Comfortaa';
-    font-size: 40px;
+    font-size: 20px;
+}
+
+#namediv h2{
+    margin-left: 5px;
 }
 
 #name {
     display: inline-block;
-    padding: 0px;   
+    padding: 0px;
 }
 
 #ppic {
     /* width:80%;
     height:80%; */
-    width: 100px;
-    height: 100px;
-    margin: 0px;
+    width: 80px;
+    height: 80px;
     padding: 0px;
     border-radius: 50%;
 }
@@ -171,20 +189,23 @@ a {
     height: 10%;
     width: 100%;
     justify-content: right;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #suggestions_for_you{
     font-family: 'Arial';
     font-size: 22px;
     color: #333 ;
+    margin-block-start: 25px;
+    margin-block-end: 25px;
+    /* margin: 5px; */
 }
 
 #suggestion_pic {
     /* width:10%;
     height:80%; */
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     margin: 0px;
     padding: 5px;
     border-radius: 50%;
@@ -199,7 +220,7 @@ a {
     /* align-items: center; */
     justify-content: start;
     flex-direction: column;
-    
+    margin: 0px;
 }   
 
 #suggested_name_box p{
@@ -210,7 +231,7 @@ a {
 #suggested_name{
     /* border-style: groove; */
     font-weight: bolder;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 #suggested_for_you{
@@ -253,7 +274,10 @@ a {
     align-items: center;
     justify-content: center;
     padding: 0px;
+    overflow:hidden;
+    text-overflow: ellipsis;
     /* background-color: blue; */
+    white-space: nowrap; 
 }
 
 #story_pic {
@@ -334,12 +358,32 @@ a {
     margin: 0px;
 }
 
+#post_titles_box{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin: 0px;
+    margin-bottom: 5px;
+}
 #post_comments_box{
     /* border-style: groove; */
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 0px;
     padding-top: 0px;
+    margin: 0px;
+}
+#post_comments_box p{
+    /* border-style: groove; */
+    margin: 0px;
+}
+#post_individual_comment_box{
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+#post_titles_box p{
     margin: 0px;
 }
 
@@ -352,6 +396,7 @@ a {
     padding-bottom: 0px;
     padding-top: 0px;
     margin: 0px;
+    margin-bottom: 5px;
 }
 
 #post_time_box p{

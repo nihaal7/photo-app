@@ -1,0 +1,53 @@
+<div id='feed'>
+    {% for post in posts %}
+    <div id='post_box'>
+        <div id='post_header_box'>
+            <div id='post_user_name_box'>
+                <b>{{post.get('user').get('username')}}</b>
+            </div>
+            <div id='post_3dots_box'>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+        </div>
+        <div id='post_image_box'>
+            <img id='post_image' src = '{{post.get('image_url')}}' alt ='posted photo by {{post.get('user').get('username')}}'/>
+        </div>
+        <div id='post_reactions_box'>
+            <div id='post_reactions_box_left'>
+                <i class="far fa-heart"></i>
+                <i class="far fa-comment"></i>
+                <i class="far fa-paper-plane"></i>                       
+            </div>
+                <i class="far fa-bookmark"></i>
+        </div>
+        <div id='post_likes_box'>
+            <p>{{post.get('likes')}} likes</p>
+        </div>
+        <div id='post_titles_box'>
+            <p><b>{{post.get('user').get('username')}}</b> {{post.get('title')}}</p>
+        </div>
+        <div id='post_comments_box'>
+            {%if post.get('comments')|length==1 %}
+            <div id='post_individual_comment_box'>
+            <p><b>{{ post.get('comments')[0].get('user').get('username')}}</b> {{post.get('comments')[0].get('text')}}</p>
+            </div>div>
+            {% endif %}
+            {%if post.get('comments')|length>1 %}
+            <a href='#'>View all {{ post.get('comments')|length }} comments</a>
+            <div id='post_individual_comment_box'>
+            <p><b>{{ post.get('comments')[0].get('user').get('username')}}</b> {{post.get('comments')[0].get('text')}}</p>
+            </div>
+            {% endif %}
+        </div>
+        <div id='post_time_box'>
+            <p>{{ post.get('display_time')}}</p>
+        </div>
+        <div id='post_your_comment_box'>
+            <i class="far fa-smile"></i>
+            <!-- <label for="comment_form" class="visuallyhidden" style="font-size: 13px;">Comment</label> -->
+            <input type='text' placeholder='Add a comment...' id='comment_form' aria-label="comment box">
+            <b><a href='#'>Post</a></b>
+        </div>
+    </div>
+    {% endfor %}
+</div>

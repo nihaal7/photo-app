@@ -1,0 +1,8 @@
+<div id="stories">
+    {% for story in stories %}
+    <div id='story_box'>
+        <img id = 'story_pic' src = ' {{ story.get('user').get('image_url') }}' alt = 'profile pic for {{ story.get('user').get('username') }}' />
+        <p id='story_name'>{{ story.get('user').get('username') }}</p>
+    </div>
+    {% endfor %}
+</div>
