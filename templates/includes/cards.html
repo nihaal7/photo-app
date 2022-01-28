@@ -30,7 +30,7 @@
             {%if post.get('comments')|length==1 %}
             <div id='post_individual_comment_box'>
             <p><b>{{ post.get('comments')[0].get('user').get('username')}}</b> {{post.get('comments')[0].get('text')}}</p>
-            </div>div>
+            </div>
             {% endif %}
             {%if post.get('comments')|length>1 %}
             <a href='#'>View all {{ post.get('comments')|length }} comments</a>
