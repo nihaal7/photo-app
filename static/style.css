@@ -479,3 +479,150 @@ a {
         font-size: 15px;
     }
    }
+
+.modal-bg {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(50, 50, 50, 0.8);
+    width :100vw;
+    height: 100vh;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-bg  button{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+.modal {
+    background-color: white;
+    width : 80vw;
+    height: 80vh;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 0px;
+}
+
+button.link {
+    color: rgb(44, 105, 155);
+    background-color: transparent;
+    border-width: 0px;
+}
+button.link:hover {
+    color: #777;
+}
+
+.modal_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+}
+
+.modal_profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    height: 20%;
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+}
+.modal_comments{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:start;
+    overflow-y:auto;
+    height: 100%;
+}
+
+.modal_image{
+    height:100%;
+    width: 70%;
+
+}
+
+.modal_profile_pic{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin:5px;
+}
+
+.modal_comment_pic{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.modal_individual_comment_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 95%;
+    margin:5px;
+}
+
+.modal_comment_text_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin:5px;
+}
+
+.modal_comment_pic_box{
+    width:10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    padding-top: 0px;
+    margin:5px;
+}
+
+.modal_comment_heart_box{
+    width:10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:5px;
+    padding-top: 0px;
+    margin:5px;
+}
+
+.modal_comment_text_box p{
+    margin: 0px;
+    font-size: 14px;
+}
+
+.modal_comment_text_box p:nth-child(2){
+    margin-top: 2px;
+}
+
+button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+} 
+
+.fa-times{
+    color: white;
+    font-size: 30px;
+}
