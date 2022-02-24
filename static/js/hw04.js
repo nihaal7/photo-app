@@ -1,3 +1,4 @@
+
 const story2Html = story => {
     return `
         <div id = 'story_box'>
@@ -147,8 +148,9 @@ const bookmarkUnbookmark = ev => {
     }
 };
 
-const destoryModal = ev =>{
+const destoryModal = (ev,postId) => {
     document.querySelector('#modal-container').innerHTML = '';
+    document.querySelector('#'+'view_more_'+postId).focus();
 };
 
 const comments2Html = comment => {
@@ -170,13 +172,14 @@ const comments2Html = comment => {
 
 const showPostDetail = ev => {
     const postId = ev.currentTarget.dataset.postId;
+    view_post_id = postId;
     fetch(`/api/posts/${postId}`)
         .then(response => response.json())
         .then(post=> {
             const html = `
             <div class ="modal-bg">
-                <button onClick="destoryModal(event)">
-                    <i id='close_button' class="fas fa-times"></i>
+                <button id='close_button' onClick="destoryModal(event,${postId})">
+                    <i class="fas fa-times"></i>
                 </button>
                 <div class ="modal">
                     <img class="modal_image" src='${post.image_url}'/>
@@ -228,7 +231,7 @@ const postComment = ev => {
 const displayComments = (comments,postId) => {
     let html ='';
     if (comments.length > 1){
-        html+=`<button class='link' data-post-id = '${postId}'onclick="showPostDetail(event);"> View all ${comments.length} comments</button>`;
+        html+=`<button class='link' id='view_more_${postId}' data-post-id = '${postId}'onclick="showPostDetail(event);"> View all ${comments.length} comments</button>`;
     }
     if (comments && comments.length > 0){
         const lastComment = comments[comments.length - 1];
@@ -402,8 +405,9 @@ const initPage = () => {
 
 // invoke init page to display stories:
 initPage();
+var view_post_id;
 window.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
-      destoryModal(event)
+    destoryModal(event,view_post_id)      
     }
   })

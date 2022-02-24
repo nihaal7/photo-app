@@ -620,7 +620,12 @@ button{
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-} 
+}
+
+button:focus{
+    border: 1px;
+    border-style: groove;
+}
 
 .fa-times{
     color: white;
