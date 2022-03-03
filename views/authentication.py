@@ -9,7 +9,7 @@ import datetime
 def logout():
     # hint:  https://dev.to/totally_chase/python-using-jwt-in-cookies-with-a-flask-app-and-restful-api-2p75
     #return 'Implement Logout functionality'
-    resp = make_response(redirect('http://photo-app-demo-nihaal.herokuapp.com/login', 302))
+    resp = make_response(redirect('https://photo-app-demo-nihaal.herokuapp.com/login', 302))
     flask_jwt_extended.unset_jwt_cookies(resp)
     return resp
 
