@@ -1,27 +1,22 @@
-<!-- <nav class="main-nav">
-    <h1>Photo App</h1>
-    <ul>
-        <li>
-            {% if request.url_rule.endpoint == 'api_docs' %}
-                <a href="/">Home</a>
-            {% else %}
-                <a href="/api">API Docs</a>
-            {% endif %}
-        </li>
-        <li><span>{{ user.username }}</span></li>
-        <li><a href="#">Sign out</a></li>
-    </ul>
-</nav> -->
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+</head>
 <div id="navigation">
     <div id='title'>
         <h1><b>Photo App</b></h1>
     </div>
     <div id='username_signout'>
+        {% if user %}
         <div id='username'>
             <b>{{ user.username  }}</b>
         </div>
         <div id='signout'>
-            <b><a href="#">Sign Out</a></b>
+            <b><a href="/api">API Docs</a></b>
+            <b><a href="/logout">Sign Out</a></b>
         </div>
+        {% endif %}
     </div>
 </div>
