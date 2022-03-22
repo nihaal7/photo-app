@@ -69,7 +69,7 @@ def home():
 app.config["JWT_SECRET_KEY"] = os.environ.get('JWT_SECRET')
 app.config["JWT_TOKEN_LOCATION"] = ["headers", "cookies"]
 app.config["JWT_COOKIE_SECURE"] = False
-app.config["JWT_ACCESS_TOKEN_EXPIRES"] = datetime.timedelta(seconds=10)
+app.config["JWT_ACCESS_TOKEN_EXPIRES"] = datetime.timedelta(days=30)
 jwt = flask_jwt_extended.JWTManager(app)
 
 @jwt.user_lookup_loader
