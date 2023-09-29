@@ -1,3 +1,7 @@
+## Demonstration
+
+https://github.com/nihaal7/photo-app/assets/40913961/d0347061-2b16-4ad9-be8a-66d61a7e9bd0
+
 ## Installation
 To install dependencies, navigate to your `photo-app` directory on your command line and issue the following commands:
 
